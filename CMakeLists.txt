@@ -1,0 +1,12 @@
+project(first)
+cmake_minimum_required(VERSION 3.0)
+find_package(Vc 1.4.1 REQUIRED)
+include_directories(${Vc_INCLUDE_DIR})
+#add_definitions(Vc_DEFINITIONS)
+#add_compile_options(Vc_)
+link_libraries(${Vc_LIBRARIES})
+add_executable(obj1 ConsoleApplication1.cpp)
+
+#target_link_libraries(obj1 PUBLIC "C:/Users/tianyi/pkgs/Vc/install_vc/lib/Vc.lib")
+#vc_compile_for_all_implementations(objs ConsoleApplication1.cpp FLAGS -DSOME_FLAG EXCLUDE Scalar SSE2)
+message(Vc_FOUND)
